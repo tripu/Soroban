@@ -1,4 +1,4 @@
-Soroban
-=======
+Soroban (算盤, そろばん)
+====================
 
-Soroban
+A simple HTML app to facilitate memorization of extended multiplication tables.
