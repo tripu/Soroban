@@ -18,6 +18,9 @@ body {
     background-image:       linear-gradient(top, #f0f0f0, #e0e0e0);
     background-image:       -prefix-linear-gradient(top, #f0f0f0, #e0e0e0);
     background-image:       -webkit-linear-gradient(top, #f0f0f0, #e0e0e0);
+    box-sizing:             content-box;
+    -moz-box-sizing:        content-box;
+    -webkit-box-sizing:     content-box;
 }
 
 .container {
@@ -40,6 +43,7 @@ body {
     height:                 48px;
     font-size:              48px;
     line-height:            48px;
+    vertical-align:         baseline;
 }
 
 /* EOF */
