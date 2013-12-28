@@ -5,12 +5,14 @@
     <head>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Soroban</title>
+        <title>Soroban by tripu</title>
         <!-- link rel="shortcut icon" type="image/png" href="img/soroban-icon.png" -->
         <!-- link rel="stylesheet" href="css/bootstrap.min.css" -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <!-- link rel="stylesheet" href="css/bootstrap-theme.min.css" -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+        <!-- link rel="stylesheet" href="css/font-awesome.min.css" -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="css/soroban.css">
     </head>
 
@@ -23,9 +25,27 @@
                     &times;
                     <span id="operand2" class="operand"></span>
                     =
-                    <input id="result" type="number" step="1" />
+                    <input id="result" type="number" step="1" autofocus />
             </div>
         </div>
+
+        <div class="container" id="config-bar">
+            <p class="text-right">
+                <a href="#"><i class="fa fa-cog fa-2x"></i></a>
+            </p>
+            <h1><a href="https://github.com/tripu/Soroban">Soroban</a> <small>by tripu</small></h1>
+        </div>
+
+        <!-- div class="container" id="status-bar" -->
+            <div class="container progress" id="status-bar">
+              <div class="progress-bar progress-bar-success" id="barSuccess">
+                <span class="sr-only">35% Complete (success)</span>
+              </div>
+              <div class="progress-bar progress-bar-danger" id="barFail">
+                <span class="sr-only">10% Complete (danger)</span>
+              </div>
+            </div>
+        <!-- /div -->
 
         <!-- script src="js/jquery-2.0.3.min.js"></script -->
         <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>

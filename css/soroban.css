@@ -5,7 +5,7 @@ body {
     margin:                 0;
     padding:                0;
     font-family:            sans-serif;
-    font-weight:            bold;;
+    font-weight:            bold;
     /*font-size:              48px;*/
 }
 
@@ -14,16 +14,17 @@ body {
     display:                table;
     width:                  100%;
     height:                 100%;
-    text-shadow:            0 2px 2px #c0c0c0;
-    background-image:       linear-gradient(top, #f0f0f0, #e0e0e0);
+    text-shadow:            0 4px 2px #c0c0c0;
+    background-color:       #f0f0f0;
+    /*background-image:       linear-gradient(top, #f0f0f0, #e0e0e0);
     background-image:       -prefix-linear-gradient(top, #f0f0f0, #e0e0e0);
-    background-image:       -webkit-linear-gradient(top, #f0f0f0, #e0e0e0);
+    background-image:       -webkit-linear-gradient(top, #f0f0f0, #e0e0e0);*/
     box-sizing:             content-box;
     -moz-box-sizing:        content-box;
     -webkit-box-sizing:     content-box;
 }
 
-.container {
+.jumbotron > .container {
     display:                table-cell;
     text-align:             center;
     vertical-align:         middle;
@@ -32,18 +33,65 @@ body {
     line-height:            48px;
 }
 
-.container p {
+.jumbotron > .container p {
     margin:                 0;
     padding:                0;
 }
 
-.container input {
+.jumbotron > .container input {
     text-align:             center;
     width:                  2.5em;
     height:                 48px;
     font-size:              48px;
     line-height:            48px;
     vertical-align:         baseline;
+}
+
+.container#config-bar, .container#status-bar {
+    position:               fixed;
+    left:                   0;
+    right:                  0;
+    width:                  100%;
+    vertical-align:         middle;
+    background-color:       #e0e0e0;
+}
+
+.container#config-bar {
+    margin:                 0;
+    padding:                0 6px;
+    top:                    0;
+    height:                 40px;
+    /*text-align:             right;*/
+}
+
+.container#config-bar > h1 {
+    margin:                 0;
+    line-height:            40px;
+}
+
+.container#config-bar > p.text-right {
+    float:                  right;
+}
+
+.container#config-bar * {
+    line-height:            40px;
+}
+
+.container#config-bar > p > i {
+    vertical-align:         middle;
+    /*cursor:                 pointer;*/
+}
+
+.container#status-bar {
+    height:                 20px;
+    line-height:            20px;
+    margin:                 0;
+    bottom:                 0;
+    padding:                0
+}
+
+.progress-bar {
+    width:                  0;
 }
 
 /* EOF */

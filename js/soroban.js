@@ -10,6 +10,9 @@
 var CONST = {'MIN': 2,
              'MAX': 11};
 
+var opsSuccess = 0;
+var opsFail = 0;
+var totalOps = 10;
 var operand1;
 var operand2;
 var result;
@@ -17,6 +20,11 @@ var result;
 $(document).ready(function() {
 
     // $('#result').bind('enterKey', checker);
+
+    $('.fa-cog').hover(
+        function(){ $(this).addClass('fa-spin') },
+        function(){ $(this).removeClass('fa-spin') }
+    );
 
     $('#result').keyup(function(event) {
 
@@ -38,16 +46,27 @@ function mainLoop() {
 
     $('#operand1').html(globals.operand1);
     $('#operand2').html(globals.operand2);
-    $('#result')
 
 }
 
 function check(answer) {
 
+    $('#result').val(null);
+
     if (answer === globals.result) {
-        window.alert('OK!');
+        opsSuccess ++;
     } else {
-        window.alert('Nope. It\'s ' + globals.result + '.');
+        opsFail ++;
+    }
+
+    $('#barSuccess').css('width', parseFloat(100 * opsSuccess / totalOps) + '%');
+    $('#barFail').css('width', parseFloat(100 * opsFail / totalOps) + '%');
+
+    if (totalOps === opsSuccess + opsFail) {
+        // window.alert('End!');
+        $('#result').prop('disabled', true);
+    } else {
+        mainLoop();
     }
 
 }
