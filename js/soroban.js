@@ -8,7 +8,7 @@
 'use strict';
 
 var CONST = {'MIN': 2,
-             'MAX': 11};
+             'MAX': 12};
 
 var opsSuccess = 0;
 var opsFail = 0;

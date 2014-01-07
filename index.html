@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<!-- Soroban (算盤, そろばん).
+     A simple HTML app to facilitate memorization of extended multiplication tables.
+     https://github.com/tripu/Soroban
+     http://tripu.info
+     © 2013, 2014 tripu. All rights reserved.
+     Distributed under the terms of the GNU General Public License, version 3. -->
+
 <html>
 
     <head>
@@ -31,21 +38,162 @@
 
         <div class="container" id="config-bar">
             <p class="text-right">
-                <a href="#"><i class="fa fa-cog fa-2x"></i></a>
+                <a href="#" data-toggle="modal" data-target="#settings"><i class="fa fa-cog fa-2x"></i></a>
             </p>
-            <h1><a href="https://github.com/tripu/Soroban">Soroban</a> <small>by tripu</small></h1>
+            <p class="text-right">
+                <a href="#" data-toggle="modal" data-target="#about"><i class="fa fa-info-circle fa-2x"></i></a>
+            </p>
+            <!-- p class="text-right">
+                <a href="#" data-toggle="modal" data-target="#tables"><i class="fa fa-table fa-2x"></i></a>
+            </p -->
+            <h1><!-- a href="https://github.com/tripu/Soroban" -->Soroban<!-- /a --> <small>by tripu</small></h1>
         </div>
 
-        <!-- div class="container" id="status-bar" -->
-            <div class="container progress" id="status-bar">
-              <div class="progress-bar progress-bar-success" id="barSuccess">
-                <span class="sr-only">35% Complete (success)</span>
-              </div>
-              <div class="progress-bar progress-bar-danger" id="barFail">
-                <span class="sr-only">10% Complete (danger)</span>
-              </div>
+        <div class="container progress" id="status-bar">
+          <div class="progress-bar progress-bar-success" id="barSuccess">
+            <span class="sr-only">35% Complete (success)</span>
+          </div>
+          <div class="progress-bar progress-bar-danger" id="barFail">
+            <span class="sr-only">10% Complete (danger)</span>
+          </div>
+        </div>
+
+        <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="titleSettings" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="titleSettings">Settings</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2">Mode</div>
+                            <div class="col-md-10">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="#">School</a></li>
+                                    <li class="active"><a href="#">Beyond 10</a></li>
+                                    <li><a href="#">Random ops</a></li>
+                                    <li><a href="#">Custom</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form role="form" class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-2"></div>
+                                        <label class="col-md-1">+</label>
+                                        <input type="checkbox" class="form-control col-md-9" label="df"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2"></div>
+                                        <label class="col-md-1">-</label>
+                                        <input type="checkbox" class="form-control col-md-9">do</input>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2"></div>
+                                        <input type="checkbox" class="form-control col-md-2">&times;</input>
+                                        <input type="number" class="form-control col-md-4" />
+                                        <input type="checkbox" class="form-control col-md-4">&times;</input>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2"></div>
+                                        <label class="col-md-1">/</label>
+                                        <input type="checkbox" class="form-control col-md-9">do</input>
+                                    </div>
+                                </form>
+                            </div>
+                        </div -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">OK</button>
+                    </div>
+                </div>
             </div>
-        <!-- /div -->
+        </div>
+
+        <div class="modal" id="about" tabindex="-1" role="dialog" aria-labelledby="titleAbout" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="titleAbout">Soroban (算盤, そろばん)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><em>A simple HTML app to facilitate memorization of extended multiplication tables</em></p>
+                        <p><a href="">https://github.com/tripu/Soroban</a <br />
+                            <a href="http://tripu.info">http://tripu.info</a></p>
+                        <p>© 2013, 2014 tripu. All rights reserved</p>
+                        <p>Distributed under the terms of the
+                            <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License, version 3</a></p>
+                        <a href="https://www.gnu.org/licenses/gpl.html"><img src="img/gplv3-127x51.png" alt="GPL v3 logo"
+                            title="GNU General Public License, version 3"/></a>
+                        <a href="http://validator.w3.org/check?uri=referer"><img src="img/html5-badge-h-css3-semantics-storage.png"
+                            alt="HTML5 Powered with CSS3 / Styling, Semantics, and Offline &amp; Storage"
+                            title="Validate this web page now"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="tables" tabindex="-1" role="dialog" aria-labelledby="titleTable" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="titleTable">Multiplication tables</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <td/>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="axis">2</td>
+                                    <td class="square">4</td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td class="axis">3</td>
+                                    <td></td>
+                                    <td class="square">9</td>
+                                    <td>12</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td class="axis">4</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="square">16</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="axis">5</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="square">25</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- script src="js/jquery-2.0.3.min.js"></script -->
         <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>

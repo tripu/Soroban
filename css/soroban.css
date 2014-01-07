@@ -71,6 +71,8 @@ body {
 
 .container#config-bar > p.text-right {
     float:                  right;
+    margin-bottom:          0;
+    margin-left:            6px;
 }
 
 .container#config-bar * {
@@ -92,6 +94,31 @@ body {
 
 .progress-bar {
     width:                  0;
+}
+
+.modal {
+    font-weight:            normal;
+}
+
+thead, td.axis {
+    font-weight:            bold;
+}
+
+td {
+    padding:                2px 8px;
+    text-align:             right;
+}
+
+td.square {
+    color:                  #800000;
+}
+
+td.basic {
+    color:                  #0080000;
+}
+
+td.extended {
+    color:                  #000080;
 }
 
 /* EOF */
