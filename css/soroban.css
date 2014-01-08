@@ -105,20 +105,24 @@ thead, td.axis {
 }
 
 td {
-    padding:                2px 8px;
+    padding:                2px 6px;
     text-align:             right;
 }
 
-td.square {
+/*td.square {
     color:                  #800000;
-}
+}*/
 
-td.basic {
-    color:                  #0080000;
-}
+/*td.symbol {
+    text-align:             center;
+}*/
+
+/*td.basic {
+    color:                  #008000;
+}*/
 
 td.extended {
-    color:                  #000080;
+    background-color:       #fff0f0;
 }
 
 /* EOF */
