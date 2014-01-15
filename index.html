@@ -29,7 +29,8 @@
             <div class="container">
                 <p>
                     <span id="operand1" class="operand"></span>
-                    &times;
+                    <!-- &times; -->
+                    <span id="operation"></span>
                     <span id="operand2" class="operand"></span>
                     =
                     <input id="result" type="number" step="1" autofocus />
@@ -46,7 +47,7 @@
             <p class="text-right">
                 <a href="#" data-toggle="modal" data-target="#tables"><i class="fa fa-table fa-2x"></i></a>
             </p>
-            <h1><!-- a href="https://github.com/tripu/Soroban" -->Soroban<!-- /a --> <small>by tripu</small></h1>
+            <h1>Soroban <small>by tripu</small></h1>
         </div>
 
         <div class="container progress" id="status-bar">
@@ -66,7 +67,7 @@
                         <h4 class="modal-title" id="titleSettings">Settings</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
+                        <!-- div class="row">
                             <div class="col-md-2">Mode</div>
                             <div class="col-md-10">
                                 <ul class="nav nav-pills nav-justified">
@@ -77,34 +78,30 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- div class="row">
+                        <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-10">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
                                 <form role="form" class="form-horizontal">
                                     <div class="form-group">
                                         <div class="col-md-2"></div>
-                                        <label class="col-md-1">+</label>
-                                        <input type="checkbox" class="form-control col-md-9" label="df"/>
+                                        <label class="control-label col-md-1">+</label>
+                                        <input type="checkbox" class="col-md-9" label="df"/>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-2"></div>
-                                        <label class="col-md-1">-</label>
-                                        <input type="checkbox" class="form-control col-md-9">do</input>
+                                        <label class="control-label col-md-1">-</label>
+                                        <input type="checkbox" class="col-md-9">do</input>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-2"></div>
-                                        <input type="checkbox" class="form-control col-md-2">&times;</input>
-                                        <input type="number" class="form-control col-md-4" />
-                                        <input type="checkbox" class="form-control col-md-4">&times;</input>
+                                        <input type="checkbox" class="col-md-2">&times;</input>
+                                        <input type="number" class="col-md-4" />
+                                        <input type="checkbox" class="col-md-4">&times;</input>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-2"></div>
-                                        <label class="col-md-1">/</label>
-                                        <input type="checkbox" class="form-control col-md-9">do</input>
+                                        <label class="control-label col-md-1">/</label>
+                                        <input type="checkbox" class="col-md-9">do</input>
                                     </div>
                                 </form>
                             </div>
@@ -117,7 +114,7 @@
             </div>
         </div>
 
-        <div class="modal" id="about" tabindex="-1" role="dialog" aria-labelledby="titleAbout" aria-hidden="true">
+        <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="titleAbout" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -126,7 +123,7 @@
                     </div>
                     <div class="modal-body">
                         <p><em>A simple HTML app to facilitate memorization of extended multiplication tables</em></p>
-                        <p><a href="">https://github.com/tripu/Soroban</a <br />
+                        <p><a href="">https://github.com/tripu/Soroban</a> <br />
                             <a href="http://tripu.info">http://tripu.info</a></p>
                         <p>© 2013, 2014 tripu. All rights reserved</p>
                         <p>Distributed under the terms of the
@@ -141,7 +138,7 @@
             </div>
         </div>
 
-        <div class="modal" id="tables" tabindex="-1" role="dialog" aria-labelledby="titleTable" aria-hidden="true">
+        <div class="modal fade" id="tables" tabindex="-1" role="dialog" aria-labelledby="titleTable" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -151,9 +148,9 @@
                     <div class="modal-body">
                         <table id="tableOfTables" border="1">
                             <thead>
-                                <tr />
+                                <tr><td></td></tr>
                             </thead>
-                            <tbody/>
+                            <tbody></tbody>
                         </table>
                     </div>
                 </div>

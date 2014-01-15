@@ -8,13 +8,15 @@
 'use strict';
 
 var CONST = {'MIN': 2,
-             'MAX': 12};
+             'MAX': 20,
+             'SYMBOLS': ['+', '-', '&times;', '/']};
 
 var opsSuccess = 0;
 var opsFail = 0;
-var totalOps = 10;
+var totalOps = 20;
 var operand1;
 var operand2;
+var operation;
 var result;
 var multTableMin;
 var multTableMax;
@@ -44,10 +46,37 @@ $(document).ready(function() {
 
 function mainLoop() {
 
-    globals.operand1 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
-    globals.operand2 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
-    globals.result = parseInt(globals.operand1 * globals.operand2);
+    globals.operation = Math.floor(CONST.SYMBOLS.length * Math.random());
 
+    switch (globals.operation) {
+
+        case 0:
+            globals.operand1 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.operand2 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.result = parseInt(globals.operand1 + globals.operand2);
+            break;
+
+        case 1:
+            globals.operand1 = Math.floor(CONST.MIN + 1 + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.operand2 = Math.floor(CONST.MIN + Math.random() * (globals.operand1 - CONST.MIN + 1));
+            globals.result = parseInt(globals.operand1 - globals.operand2);
+            break;
+
+        case 2:
+            globals.operand1 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.operand2 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.result = parseInt(globals.operand1 * globals.operand2);
+            break;
+
+        case 3:
+            globals.operand2 = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.result = Math.floor(CONST.MIN + Math.random() * (CONST.MAX - CONST.MIN + 1));
+            globals.operand1 = parseInt(globals.operand2 * globals.result);
+            break;
+
+    }
+
+    $('#operation').html(CONST.SYMBOLS[globals.operation]);
     $('#operand1').html(globals.operand1);
     $('#operand2').html(globals.operand2);
 
