@@ -59,9 +59,13 @@ body {
 .container#config-bar {
     margin:                 0;
     padding:                0 6px;
-    top:                    0;
+    top:                    -40px;
     height:                 40px;
-    /*text-align:             right;*/
+}
+
+.container#config-bar {
+    transition:             top 1s;
+    -webkit-transition:     top 1s;
 }
 
 .container#config-bar > h1 {
@@ -88,8 +92,13 @@ body {
     height:                 20px;
     line-height:            20px;
     margin:                 0;
-    bottom:                 0;
+    bottom:                 -20px;
     padding:                0
+}
+
+.container#status-bar {
+    transition:             bottom 1s;
+    -webkit-transition:     bottom 1s;
 }
 
 .progress-bar {
@@ -123,6 +132,21 @@ td {
 
 td.extended {
     background-color:       #fff0f0;
+}
+
+/*#dashboard {
+    display:                none;
+}*/
+
+#splash {
+/*position: relative;
+text-align: center;
+left: 0px;
+top: 100px;
+margin: auto 0px;
+z-index: 10;
+display: block;*/
+    cursor:                 pointer;
 }
 
 /* EOF */

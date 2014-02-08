@@ -3,41 +3,53 @@
 <!-- Soroban (算盤, そろばん).
      A simple HTML app to facilitate memorization of extended multiplication tables.
      https://github.com/tripu/Soroban
+     http://soroban.tripu.info/
      http://tripu.info
      © 2013, 2014 tripu. All rights reserved.
      Distributed under the terms of the GNU General Public License, version 3. -->
 
-<html>
+<html lang="en-GB">
 
     <head>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="application-name" content="Soroban">
+        <meta name="description" content="A simple HTML app to facilitate memorization of extended multiplication tables">
+        <meta name="keywords" content="soroban,算盤,そろばん,maths">
+        <meta name="author" content="tripu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Soroban by tripu</title>
-        <!-- link rel="shortcut icon" type="image/png" href="img/soroban-icon.png" -->
-        <!-- link rel="stylesheet" href="css/bootstrap.min.css" -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-        <!-- link rel="stylesheet" href="css/bootstrap-theme.min.css" -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-        <!-- link rel="stylesheet" href="css/font-awesome.min.css" -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="icon" type="image/png" href="img/bead.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <!-- link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" -->
         <link rel="stylesheet" href="css/soroban.css">
     </head>
 
     <body>
 
-        <div class="jumbotron">
+        <div id="dashboard" class="jumbotron">
             <div class="container">
                 <p>
                     <span id="operand1" class="operand"></span>
-                    <!-- &times; -->
                     <span id="operation"></span>
                     <span id="operand2" class="operand"></span>
                     =
                     <input id="result" type="number" step="1" autofocus />
+                </p>
             </div>
         </div>
 
-        <div class="container" id="config-bar">
+        <div id="splash" class="jumbotron">
+            <div class="container">
+                <img src="img/abacus4.png" alt="Large logo" />
+                <h1>Soroban <small>by tripu</small></h1>
+            </div>
+        </div>
+
+        <div id="config-bar" class="container">
             <p class="text-right">
                 <a href="#" data-toggle="modal" data-target="#settings"><i class="fa fa-cog fa-2x"></i></a>
             </p>
@@ -47,10 +59,10 @@
             <p class="text-right">
                 <a href="#" data-toggle="modal" data-target="#tables"><i class="fa fa-table fa-2x"></i></a>
             </p>
-            <h1>Soroban <small>by tripu</small></h1>
+            <h1><img src="img/abacus-small.png" alt=""/> Soroban <small>by tripu</small></h1>
         </div>
 
-        <div class="container progress" id="status-bar">
+        <div id="status-bar" class="container progress">
           <div class="progress-bar progress-bar-success" id="barSuccess">
             <span class="sr-only">35% Complete (success)</span>
           </div>
@@ -126,6 +138,9 @@
                         <p><a href="">https://github.com/tripu/Soroban</a> <br />
                             <a href="http://tripu.info">http://tripu.info</a></p>
                         <p>© 2013, 2014 tripu. All rights reserved</p>
+                        https://commons.wikimedia.org/wiki/File:Abacus_1_(PSF).png
+                        https://secure.flickr.com/photos/lwr/3378700109/
+                        https://secure.flickr.com/photos/80318369@N00/538819881
                         <p>Distributed under the terms of the
                             <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License, version 3</a></p>
                         <a href="https://www.gnu.org/licenses/gpl.html"><img src="img/gplv3-127x51.png" alt="GPL v3 logo"
@@ -157,10 +172,10 @@
             </div>
         </div>
 
-        <!-- script src="js/jquery-2.0.3.min.js"></script -->
-        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <!-- script src="js/bootstrap.min.js"></script -->
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <!-- script src="http://code.jquery.com/jquery-2.0.3.min.js"></script -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script -->
         <script src="js/soroban.js"></script>
 
     </body>

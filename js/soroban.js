@@ -23,12 +23,13 @@ var multTableMax;
 
 $(document).ready(function() {
 
+    $('#dashboard').hide();
     // $('#result').bind('enterKey', checker);
 
-    $('.fa-cog').hover(
+    /*$('.fa-cog').hover(
         function(){ $(this).addClass('fa-spin') },
         function(){ $(this).removeClass('fa-spin') }
-    );
+    );*/
 
     $('#tables').on('shown.bs.modal', buildMultiplicationTables);
 
@@ -38,6 +39,14 @@ $(document).ready(function() {
             check(parseInt($(this)[0].value));
         }
 
+    });
+
+    $('#splash').click(function() {
+        $(this).fadeOut(500, function() {
+            $('#config-bar').css('top', 0);
+            $('#status-bar').delay(1000).css('bottom', 0);
+            $('#dashboard').delay(1000).fadeIn(1000);
+        });
     });
 
     mainLoop();
