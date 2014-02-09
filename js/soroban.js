@@ -41,11 +41,11 @@ $(document).ready(function() {
 
     });
 
-    $('#splash').click(function() {
-        $(this).fadeOut(500, function() {
+    $('#splash img').click(function() {
+        $('#splash').fadeOut(500, function() {
             $('#config-bar').css('top', 0);
-            $('#status-bar').delay(1000).css('bottom', 0);
-            $('#dashboard').delay(1000).fadeIn(1000);
+            $('#status-bar').delay(500).css('bottom', 0);
+            $('#dashboard').delay(500).fadeIn(1000);
         });
     });
 
