@@ -9,7 +9,7 @@
 
 var CONST = {'MIN': 2,
              'MAX': 20,
-             'SYMBOLS': ['+', '-', '&times;', '/']};
+             'SYMBOLS': ['&#43;', '&minus;', '&times;', '&#8725;']};
 
 var opsSuccess = 0;
 var opsFail = 0;
@@ -88,6 +88,7 @@ function mainLoop() {
     $('#operation').html(CONST.SYMBOLS[globals.operation]);
     $('#operand1').html(globals.operand1);
     $('#operand2').html(globals.operand2);
+    $('#result').focus();
 
 }
 
